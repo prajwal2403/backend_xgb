@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+#b1{
+  min-width: 30%;
+}
+
+#custom-radio{
+width: 25px;
+height: 25px;
+border: 2px solid #ccc;
+border-radius: 50%;
+outline: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-right: 5px;
+}
+
+.form-check{
+  display: flex;
+}
+

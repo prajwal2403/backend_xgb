@@ -1,0 +1,106 @@
+<html data-bs-theme="dark">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/quiz_style.css')}}">
+</head>
+
+
+<body>
+
+    <div class="whole ">
+      <div class="first ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid ">
+            <a class="navbar-brand p-2" href="#">Navbar</a>
+          </div>
+        </nav>
+      </div>
+      
+      <br><br>
+    
+    <div class="container text-center ">       
+        <div class="item-1 row" >
+            <p class="fs-5" id="p1">Do you get bored with routines and enjoy changing things up regularly?</p>
+            <!--This is RadioButton Code From Bootstrap-->
+            <form class=" col form-check d-flex justify-content-center gap-4" >
+              <label>INACCURATE</label>
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q1" value="2">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q1" value="4">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q1" value="6">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q1" value="8">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q1" value="10">
+              <label>ACCURATE</label>
+            </form>
+        </div>
+
+        <div class="item-2 row ">
+          <p class="fs-5" id="p2">Are you open to changing your opinions or beliefs when presented with new information?</p>
+            <!--This is RadioButton Code From Bootstrap-->
+            <div class="form-check d-flex justify-content-center gap-4">
+              <label>INACCURATE</label>
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q2" value="2">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q2" value="4">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q2" value="6">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q2" value="8">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q2" value="10">
+              <label>ACCURATE</label>
+            </div>
+        </div>
+
+        <div class="item-3 row">
+          <p class="fs-5" id="p3">Would you rather take a different route or method, even if the usual one works just fine?"</p>
+            <!--This is RadioButton Code From Bootstrap-->
+            <div class="form-check d-flex justify-content-center gap-4">
+              <label>INACCURATE</label>
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q3" value="2">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q3" value="4">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q3" value="6">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q3" value="8">
+              <input class="radio-buttons" id="custom-radio" type="radio" name="q3" value="10">
+              <label>ACCURATE</label>
+            </div>
+        </div>
+
+        <div class="item-4 row">
+          <p class="fs-5" id="p4">Would you rather take a different route or method, even if the usual one works just fine?"</p>
+          <!--This is RadioButton Code From Bootstrap-->
+          <div class="form-check d-flex justify-content-center gap-4">
+            <label>INACCURATE</label>
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q4" value="2">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q4" value="4">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q4" value="6">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q4" value="8">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q4" value="10">
+            <label>ACCURATE</label>
+          </div>
+
+
+        </div>
+        <div class="item-5 row ">
+          <p class="fs-5" id="p5">Would you rather take a different route or method, even if the usual one works just fine?"</p>
+          <!--This is RadioButton Code From Bootstrap-->
+          <div class="form-check d-flex justify-content-center gap-4">
+            <label>INACCURATE</label>
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q5" value="2">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q5" value="4">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q5" value="6">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q5" value="8">
+            <input class="radio-buttons" id="custom-radio" type="radio" name="q5" value="10">
+            <label>ACCURATE</label>
+          </div>
+        </div>
+
+    
+        <div class="item-6 row">
+          <button type="button" id="b1" class="btn btn-outline-light">NEXT</button>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+</body>
+
+</html>
