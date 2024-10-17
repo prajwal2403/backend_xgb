@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import xgboost as xgb
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 import pickle
 import uvicorn
 
@@ -31,11 +32,15 @@ async def load_model():
     try:
         # Load your trained model
         # Replace 'model.pkl' with your actual model file
-        with open('model.pkl', 'rb') as f:
+        with open('xg_boost.pkl', 'rb') as f:
             model = pickle.load(f)
+        with open('transformer.pkl', 'pkl') as f:
+            scaler = pickle.load(f)
     except Exception as e:
         print(f"Error loading model: {e}")
         model = None
+        scaler = None
+
 
 @app.get("/")
 async def root():
@@ -43,13 +48,12 @@ async def root():
 
 @app.post("/predict", response_model=PredictionOutput)
 async def predict(input_data: PredictionInput):
-    if model is None:
+    if model is None or scaler is None:
         raise HTTPException(status_code=500, detail="Model not loaded")
     
     try:
         # Convert input features to numpy array
-        features = np.array(input_data.features).reshape(1, -1)
-
+        features = scaler.transform(np.array(input_data.features).reshape(1, -1))
         # Make prediction
         pred_proba = model.predict_proba(features)
         prediction = model.predict(features)[0]
