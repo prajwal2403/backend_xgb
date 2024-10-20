@@ -21,7 +21,7 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
     // Function to handle recognized speech and perform actions
     recognition.onresult = function (event) {
         const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
-
+        
         // Perform actions based on recognized command
         if (transcript.includes('start quiz')) {
             //speakMarathi('नमस्कार, आपण कसे आहात?');
