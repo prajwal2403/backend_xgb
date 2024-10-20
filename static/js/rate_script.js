@@ -1,6 +1,6 @@
 //var slider=document.getElementById("customRange1");
 var output=document.getElementsByClassName("range_display");
-
+var last_button=document.getElementById('last_button');
 const ratings=[];
 var arr=document.getElementsByClassName('r');
 n=arr.length;
@@ -32,7 +32,9 @@ function fun()
     .then(data => {
         console.log('Success:', data);
        // alert(JSON.stringify(data, null, 2));
-        alert(data["array"]);
+        // alert(data["array"]);
+        last_button.textContent=data["array"];
+        last_button.disabled="true";
     })
     .catch((error) => {
         console.error('Error:', error);
