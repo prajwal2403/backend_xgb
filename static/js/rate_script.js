@@ -68,7 +68,6 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
         // Perform actions based on recognized command
         if (transcript.includes('increase a')) {   
             arr[0].value++;
-            alert(arr[0]);
             output[0].textContent++;
             const utterance = new SpeechSynthesisUtterance('Value of openness increased');
             synth.speak(utterance);
@@ -102,7 +101,7 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
         {
             arr[2].value++;
             output[2].textContent++;
-            const utterance = new SpeechSynthesisUtterance(' ');
+            const utterance = new SpeechSynthesisUtterance('asdsad ');
             synth.speak(utterance);
         }
 
@@ -130,6 +129,25 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
             synth.speak(utterance);
         }
 
+        else if(transcript.includes('increase eye'))  //For Incrementing I
+        {
+            arr[8].value++;
+            output[8].textContent++;
+            const utterance = new SpeechSynthesisUtterance('Value For Openess Set to 2');
+            synth.speak(utterance);
+        }
+
+        else if(transcript.includes('decrease eye'))
+        {
+            arr[8].value--;
+            output[8].textContent--;
+            const utterance = new SpeechSynthesisUtterance('Value For Openess Set to 2');
+            synth.speak(utterance);
+        
+        }
+
+
+
         else if(transcript.includes('increase e'))
         {
             arr[4].value++;
@@ -137,6 +155,8 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance('Value For Openess Set to 2');
             synth.speak(utterance);
         }
+        
+
         else if(transcript.includes('decrease e'))
         {
             arr[4].value--;
@@ -199,7 +219,7 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
                 const utterance = new SpeechSynthesisUtterance('Value For Openess Set to 2');
                 synth.speak(utterance);
         }
-        else if(transcript.includes('decrease i') || transcript.includes("increas eye"))
+        else if(transcript.includes('decrease i') || transcript.includes("decrease eye"))
         {
                     arr[8].value--;
                     output[8].textContent--;
@@ -236,9 +256,7 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
             fun();
         }
 
-    
-        synth.speak(utterance);
-        alert(utterance);
+
     };
 
     // Error handling
@@ -264,7 +282,3 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
 } else {
     alert('Sorry, your browser does not support Speech Recognition.');
 }
-
-
-
-
