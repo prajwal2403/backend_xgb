@@ -31,7 +31,8 @@ function fun()
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        
+       // alert(JSON.stringify(data, null, 2));
+        alert(data["array"]);
     })
     .catch((error) => {
         console.error('Error:', error);
