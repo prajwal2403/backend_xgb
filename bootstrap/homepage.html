@@ -1,5 +1,8 @@
 <html lang="en" data-bs-theme="dark">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
@@ -10,10 +13,9 @@
   <div class=" whole container-fluid bg-dark bg-gradient h-auto  mb-0 ">
 
     <nav class="gradient-background nav bg-dark bg-subtle sticky-top  pt-2 p-2 gap-4 ">
-
   
       <i class="fa-sharp-duotone fa-solid fa-lightbulb ps-5 ms-4"></i>
-      <h3 class="text-white ">CareerQuest</h3>
+      <h3 class="text-white" style="font-family:Arima ;">CareerQuest</h3>
       <a class="nav-link active text-white" aria-current="page" href="#">Active</a>
       <a class="nav-link text-white" href="#">Link</a>
       <a class="nav-link text-white" href="#">Contact Us</a>
@@ -41,45 +43,69 @@
     </div>
     
 
-    <div class="container-fluid px-4 py-5 " id="featured-3">
-      <h1 class="pb-2 border-bottom" >Are You Ready?</h1>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-  
-          <h3 class="fs-2 text-body-emphasis">Get ready</h3>
-          <p>Make sure you're in a comfortable environment where you can focus on this
-            15-minute test..</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch mx-0 g-4 py-5 ">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-4 mt-3 mb-4 display-6 lh-1 fw-bold">Are You Ready !!</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+          
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+      
+              </li>
+            </ul>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Take the career test</h3>
-          <p>You will answer 100 questions about yourself. There's no wrong answers so feel free to pick any answer.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-          </div>
-          <h3 class="fs-2 text-body-emphasis">Get your results</h3>
-          <p>View your full Career Report online.
-            Discover your work personality strengths and career list..</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
         </div>
       </div>
-    </div>
 
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-4 mt-3 mb-4 display-6 lh-1 fw-bold">Take Career Test</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+  
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+        
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-4 mt-3 mb-4 display-6 lh-1 fw-bold">Get Your Results</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+             
+              <li class="d-flex align-items-center me-3">
+
+                <!--<svg class="bi me-2" width="1em" height="1em"><use xlink:href="../static/images/CareerQuest.svg"></use></svg>-->
+      
+    
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+          
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
 
 
     <div class="container-fluid px-3 py-4 ">
