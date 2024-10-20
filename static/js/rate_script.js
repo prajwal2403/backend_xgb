@@ -214,8 +214,8 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
         }
         else if(transcript.includes('increase i') || transcript.includes("increase eye"))
         {
-                arr[8].value--;
-                output[8].textContent--;
+                arr[8].value++;
+                output[8].textContent++;
                 const utterance = new SpeechSynthesisUtterance('Value For Openess Set to 2');
                 synth.speak(utterance);
         }
