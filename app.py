@@ -5,7 +5,7 @@ import xgboost as xgb
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 
-app = Flask(__name__,template_folder="bootstrap")
+app = Flask(__name__,template_folder="templates")
 
 @app.route('/')
 def index():
