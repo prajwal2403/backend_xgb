@@ -3,7 +3,9 @@ redirect_button.addEventListener("click",redirect);
 function redirect(){
     window.open("quiz");
 }
-
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
 //Speech Recognition
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;

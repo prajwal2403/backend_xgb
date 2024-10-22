@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="icon" href="{{url_for('static',filename='images/favicon.ico') }}" type="image/x-icon">
+    
 </head>
 
 <body>
@@ -14,9 +15,9 @@
   <div class=" whole container-fluid bg-dark bg-gradient h-auto  mb-0 ">
     <nav class="gradient-background nav bg-dark bg-subtle sticky-top  pt-2 p-2 gap-4 ">
       <i class="fa-sharp-duotone fa-solid fa-lightbulb ps-5 ms-4"></i>
-      <h3 class="text-white" style="font-family:Arima ;">CareerQuest</h3>
-      <a class="nav-link active text-white" aria-current="page" href="#">Active</a>
-      <a class="nav-link text-white" href="#">Contact Us</a>
+      <h3 class="text-white" style="font-family:Arima ; margin: 6px;">CareerQuest</h3>
+      <a class="nav-link active text-white" aria-current="page" href="#a1">About The Test</a>
+      <a class="nav-link text-white" href="#a2">Contact Us</a>
     
       <button class=" bb1 btn btn-outline-light ms-auto me-2" id="startButton" type="submit">Start Quiz</button>
       <button type="button" class=" bb1 btn btn-outline-light me-3 " id="startVoice">Voice Command</button>
@@ -44,7 +45,7 @@
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-4 mt-3 mb-4 display-6 lh-1 fw-bold">Are You Ready !!</h3>
+            <h3 class="pt-4 mt-3 mb-4 display-6 lh-1 fw-bold">Are You Ready?</h3>
             <ul class="d-flex list-unstyled mt-auto">
               
               <li class="d-flex align-items-center me-3">
@@ -105,8 +106,8 @@
     </div>
 
 
-    <div class="container-fluid px-3 py-4 ">
-      <h1 class="pb-2 border-bottom text-white">About The Test</h1>
+    <div class="container-fluid px-3 py-4 " id="a1">
+      <h1 class="pb-2 border-bottom text-white" >About The Test</h1>
   
       <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
         <div class="col d-flex flex-column align-items-start gap-2">
@@ -175,7 +176,7 @@
 
   </div>
 
-  <footer class="container-fluid py-5 bg-black   ">
+  <footer class="container-fluid py-5 bg-black   " id="a2">
     <div class="row">
       <div class="col-12 col-md">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>

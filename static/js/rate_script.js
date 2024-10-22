@@ -1,3 +1,7 @@
+        // This script will run when the page loads
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
 //var slider=document.getElementById("customRange1");
 var output=document.getElementsByClassName("range_display");
 var last_button=document.getElementById('last_button');
