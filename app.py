@@ -8,9 +8,6 @@ import pandas as pd
 app = Flask(__name__,template_folder="templates")
 
 
-def apply_csp(response):
-    response.headers['Content-Security-Policy'] = csp_policy
-    return response
 
 @app.route('/')
 def index():
