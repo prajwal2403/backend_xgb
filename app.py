@@ -9,13 +9,6 @@ app = Flask(__name__,template_folder="templates")
 
 @app.after_request
 def apply_csp(response):
-    csp_policy = (
-        "script-src 'self' 'unsafe-inline'; "  # Allow inline scripts and self-origin scripts
-        "connect-src 'self' https://speech.googleapis.com; "
-        "connect-src 'self' https://your-api-url.com; "  # Allow your API domain here
-
-
-    )
     response.headers['Content-Security-Policy'] = csp_policy
     return response
 
