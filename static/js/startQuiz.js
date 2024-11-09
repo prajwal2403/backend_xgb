@@ -6,6 +6,11 @@ function redirect(){
     window.open("main");
 }
 
+function redirect1()
+{
+    window.open("/");
+}
+
 
 
 //Speech Recognition
@@ -25,8 +30,15 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
     recognition.onresult = function (event) {
         const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
 
+        if(transcript.includes("go back"))
+        {
+            const utterance = new SpeechSynthesisUtterance('Quiz is Starting');
+            synth.speak(utterance);
+            redirect1();
+        }
+
         // Perform actions based on recognized command
-        if (transcript.includes('start quiz')) {
+        else if (transcript.includes('start quiz')) {
             
             const utterance = new SpeechSynthesisUtterance('Quiz is Starting');
             synth.speak(utterance);

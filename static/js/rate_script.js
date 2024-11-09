@@ -70,6 +70,12 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
         const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
         mic_check.textContent = `You said: ${transcript}`;
         // Perform actions based on recognized command
+
+        if(transcript.includes("go back"))
+        {
+            window.open("quiz");
+        }
+
         if (transcript.includes('increase a')) {   
             arr[0].value++;
             output[0].textContent++;
