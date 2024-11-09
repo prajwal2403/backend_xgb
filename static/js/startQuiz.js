@@ -1,14 +1,18 @@
 var redirect_button=document.getElementsByClassName('btn')[0];
 redirect_button.addEventListener("click",redirect);
+var test_button=document.getElementById("testing");
 
+let openwindow;
 
 function redirect(){
-    window.open("main");
+    window.location="/main";
+    //window.open('main');
 }
 
 function redirect1()
 {
-    window.open("/");
+    window.location="/"
+    //window.open('/');
 }
 
 
@@ -29,13 +33,12 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
     // Function to handle recognized speech and perform actions
     recognition.onresult = function (event) {
         const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
-
-        if(transcript.includes("go back"))
+        test_button.textContent = `You said: ${transcript}`;
+        
+        if(transcript.includes('go back'))
         {
-            const utterance = new SpeechSynthesisUtterance('Quiz is Starting');
-            synth.speak(utterance);
             redirect1();
-        }
+        }   
 
         // Perform actions based on recognized command
         else if (transcript.includes('start quiz')) {

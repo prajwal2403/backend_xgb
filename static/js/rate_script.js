@@ -73,7 +73,8 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
 
         if(transcript.includes("go back"))
         {
-            window.open("quiz");
+            //window.open("quiz");
+            window.location="/quiz"
         }
 
         if (transcript.includes('increase a')) {   

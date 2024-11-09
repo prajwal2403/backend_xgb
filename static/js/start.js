@@ -1,7 +1,8 @@
 redirect_button=document.getElementById('startButton');
 redirect_button.addEventListener("click",redirect);
 function redirect(){
-    window.open("quiz");
+    //window.open("quiz");
+    window.location="/quiz";
 }
 window.onload = function() {
     window.scrollTo(0, 0);
@@ -37,6 +38,12 @@ if ('SpeechRecognition' in window && 'speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance('Scrolled Up');
             window.scrollBy(0, -window.innerHeight);
         }
+
+        else if(transcript.includes('start voice command'))
+        {
+            
+        }
+
         synth.speak(utterance);
     };
 
